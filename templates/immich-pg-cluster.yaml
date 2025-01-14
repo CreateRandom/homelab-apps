@@ -31,4 +31,4 @@ spec:
 
   storage:
     size: 4Gi
-    storageClass: local-path-storage
+    storageClass: local-path
