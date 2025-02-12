@@ -58,8 +58,8 @@ spec:
               size: 10Gi
               # Optional: Set this to pvc to avoid downloading the ML models every start.
               type: pvc
-              accessMode: ReadWriteMany
-              storageClass: longhorn
+              accessMode: ReadWriteOnce
+              storageClass: local-path
 
         envFrom:
           - secretRef:
