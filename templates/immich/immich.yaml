@@ -12,7 +12,7 @@ spec:
       values: |-
         # These entries are shared between all the Immich components
         image:
-          tag: v1.123.0
+          tag: v1.126.1
 
         immich:
           persistence:
