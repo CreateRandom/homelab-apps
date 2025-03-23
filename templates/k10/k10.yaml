@@ -16,6 +16,7 @@ spec:
         auth:
           basicAuth:
             enabled: true
+            htpasswd:"k10-admin:$2y$10$oxm9JprY19Bca/7ECW6dReRwr/Cgz4n/G4CNgCz9emrzrx8j8dHqC"
 
   destination:
     server: 'https://kubernetes.default.svc'
