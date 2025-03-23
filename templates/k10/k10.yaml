@@ -6,7 +6,7 @@ metadata:
 spec:
   sources:
   - repoURL: 'https://charts.kasten.io/'
-    chart: kasten/k10
+    chart: k10
     targetRevision: 7.5.7
     helm:
       values: |-      
