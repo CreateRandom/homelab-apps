@@ -13,6 +13,9 @@ spec:
         ingress:
           create: true
           urlPath: "k10.familielux.org"
+        auth:
+          basicAuth:
+            enabled: true
 
   destination:
     server: 'https://kubernetes.default.svc'
