@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   sources:
-  - repoURL: 'hhttps://dl.gitea.com/charts/'
+  - repoURL: 'https://dl.gitea.com/charts/'
     chart: gitea
     targetRevision: 1.4.1
     helm:
