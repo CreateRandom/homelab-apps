@@ -7,7 +7,7 @@ spec:
   sources:
   - repoURL: 'https://dl.gitea.com/charts/'
     chart: gitea
-    targetRevision: 1.4.1
+    targetRevision: 9.6.1
     helm:
       values: |-
         ingress:
