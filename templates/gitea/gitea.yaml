@@ -1,0 +1,41 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gitea
+  namespace: argocd
+spec:
+  sources:
+  - repoURL: 'hhttps://dl.gitea.com/charts/'
+    chart: gitea
+    targetRevision: 1.4.1
+    helm:
+      values: |-
+        ingress:
+          enabled: true
+          hosts:
+            - host: git.familielux.org
+              paths:
+                - path: /
+                  pathType: Prefix
+        redis-cluster:
+          enabled: false
+        redis:
+          enabled: true
+        postgresql:
+          enabled: true
+        postgresql-ha:
+          enabled: false
+        persistence:
+          enabled: true
+
+        gitea:
+          config:
+            database:
+              DB_TYPE: postgres
+            indexer:
+              ISSUE_INDEXER_TYPE: bleve
+              REPO_INDEXER_ENABLED: true
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: gitea
+  project: default
