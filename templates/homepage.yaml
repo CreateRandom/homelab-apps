@@ -56,6 +56,9 @@ spec:
                 paths:
                   - path: /
                     pathType: Prefix
+        env:
+          - name: HOMEPAGE_ALLOWED_HOSTS
+            value: homepage.familielux.org
     chart: homepage
   destination:
     server: https://kubernetes.default.svc
