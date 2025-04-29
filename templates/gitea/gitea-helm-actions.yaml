@@ -6,6 +6,7 @@ metadata:
 spec:
   sources:
   - repoURL: 'https://gitea.com/gitea/helm-actions.git'
+    chart: actions
     targetRevision: HEAD
     path: .
   destination:
