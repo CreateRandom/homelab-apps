@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gitea
+  namespace: argocd
+spec:
+  sources:
+  - repoURL: 'https://gitea.com/gitea/helm-actions'
+    targetRevision: main
+    path: .
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: gitea
+  project: default
