@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   sources:
-  - repoURL: 'https://gitea.com/gitea/helm-actions'
+  - repoURL: 'https://gitea.com/gitea/helm-actions.git'
     targetRevision: HEAD
     path: .
   destination:
