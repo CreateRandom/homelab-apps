@@ -7,7 +7,7 @@ spec:
   sources:
   - repoURL: 'https://dl.gitea.com/charts/'
     chart: gitea
-    targetRevision: 11.0.1
+    targetRevision: 12.2.0
     helm:
       values: |-
         ingress:
@@ -37,6 +37,8 @@ spec:
             indexer:
               ISSUE_INDEXER_TYPE: bleve
               REPO_INDEXER_ENABLED: true
+            packages:
+              enabled: true
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: gitea

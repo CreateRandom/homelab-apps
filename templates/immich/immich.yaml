@@ -7,12 +7,12 @@ spec:
   sources:
   - repoURL: 'https://immich-app.github.io/immich-charts'
     chart: immich
-    targetRevision: 0.9.2
+    targetRevision: 0.9.3
     helm:
       values: |-
         # These entries are shared between all the Immich components
         image:
-          tag: v1.132.3
+          tag: v1.141.1
 
         immich:
           persistence:
