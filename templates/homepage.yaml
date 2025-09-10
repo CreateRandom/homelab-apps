@@ -10,6 +10,7 @@ spec:
   source:
     repoURL: https://jameswynn.github.io/helm-charts
     targetRevision: 2.1.0
+    targetRevision: 2.1.0
     helm:
       values: |-
         config:
