@@ -7,13 +7,12 @@ spec:
   sources:
   - repoURL: 'https://immich-app.github.io/immich-charts'
     chart: immich
-    targetRevision: 0.9.3
-    targetRevision: 0.9.3
+    targetRevision: 0.10.0
     helm:
       values: |-
         # These entries are shared between all the Immich components
         image:
-          tag: v1.141.1
+          tag: v2.1.0
 
         immich:
           persistence:
@@ -25,7 +24,7 @@ spec:
 
         # Dependencies
 
-        redis:
+        valkey:
           enabled: true
           architecture: standalone
           auth:
