@@ -17,7 +17,7 @@ spec:
               image:
                 tag: v2.6.3
               env:
-                DB_HOSTNAME: 'immich-postgres-rw
+                DB_HOSTNAME: 'immich-postgres-rw'
               envFrom:
                 - secretRef:
                     name: immich-postgres-user
