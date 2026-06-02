@@ -73,8 +73,6 @@ spec:
               type: persistentVolumeClaim
               accessMode: ReadWriteOnce
               storageClass: local-path
-
-
   - repoURL: https://github.com/CreateRandom/homelab-apps
     path: templates/immich/extra
     targetRevision: main
