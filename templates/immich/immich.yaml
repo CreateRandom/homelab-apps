@@ -14,13 +14,14 @@ spec:
         controllers:
           main:
             containers:
-              image:
-                tag: v2.6.3
-              env:
-                DB_HOSTNAME: 'immich-postgres-rw'
-              envFrom:
-                - secretRef:
-                    name: immich-postgres-user
+              main:
+                image:
+                  tag: v2.6.3
+                env:
+                  DB_HOSTNAME: 'immich-postgres-rw'
+                envFrom:
+                  - secretRef:
+                      name: immich-postgres-user
 
 
         immich:
