@@ -11,8 +11,17 @@ spec:
     helm:
       values: |-
         # These entries are shared between all the Immich components
-        image:
-          tag: v2.6.3
+        controllers:
+          main:
+            containers:
+              image:
+                tag: v2.6.3
+              env:
+                DB_HOSTNAME: 'immich-postgres-rw
+              envFrom:
+                - secretRef:
+                    name: immich-postgres-user
+
 
         immich:
           persistence:
@@ -65,12 +74,7 @@ spec:
               accessMode: ReadWriteOnce
               storageClass: local-path
 
-        envFrom:
-          - secretRef:
-              name: immich-postgres-user
 
-        env:
-          DB_HOSTNAME: 'immich-postgres-rw'
   - repoURL: https://github.com/CreateRandom/homelab-apps
     path: templates/immich/extra
     targetRevision: main
