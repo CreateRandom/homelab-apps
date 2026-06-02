@@ -5,9 +5,9 @@ metadata:
   namespace: argocd
 spec:
   sources:
-  - repoURL: 'https://immich-app.github.io/immich-charts'
+  - repoURL: 'oci://ghcr.io/immich-app/immich-charts/immich'
     chart: immich
-    targetRevision: 0.10.0
+    targetRevision: 0.12.0
     helm:
       values: |-
         # These entries are shared between all the Immich components
@@ -37,7 +37,6 @@ spec:
           image:
             repository: ghcr.io/immich-app/immich-server
             pullPolicy: IfNotPresent
-          
           ingress:
             main:
               enabled: true
